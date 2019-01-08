@@ -1,0 +1,26 @@
+{
+  "name": "simple-apollo-graphql-client-server",
+  "version": "1.0.0",
+  "description": "simple example of apollo server being consumed by angular and react clients using apollo client",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run react-client\" \"npm run angular-client\"",
+    "server": "node ./src/server/index.js",
+    "react-client": "cd ./src/client/react-client && yarn start",
+    "angular-client": "cd ./src/client/angular-client && ng serve --open"
+  },
+  "keywords": [
+    "graphql",
+    "apollo-client-example",
+    "apollo-client-server"
+  ],
+  "author": "Sam Grimmer",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-azure-functions": "^2.3.1",
+    "graphql": "^14.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
